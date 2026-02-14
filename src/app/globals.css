@@ -6,6 +6,9 @@
   --ras-blue: #0066a1;
   --ras-blue-dark: #004d7a;
   --ras-blue-light: #e8f4fa;
+  --ras-red: #8b1a2b;
+  --ras-red-dark: #5c1120;
+  --ras-gold: #c9a84c;
 }
 
 @theme inline {
@@ -14,6 +17,9 @@
   --color-ras-blue: var(--ras-blue);
   --color-ras-blue-dark: var(--ras-blue-dark);
   --color-ras-blue-light: var(--ras-blue-light);
+  --color-ras-red: var(--ras-red);
+  --color-ras-red-dark: var(--ras-red-dark);
+  --color-ras-gold: var(--ras-gold);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
