@@ -34,3 +34,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Fonts
+
+### IEEE RAS Typography (Responsive – Helvetica)
+
+| Element | Mobile | Tablet | Desktop |
+|--------|--------|--------|--------|
+| Title | 20 pt | 22 pt | 24 pt |
+| Authors | 10 pt | 10.5 pt | 11 pt |
+| Affiliations | 9 pt | 9.5 pt | 10 pt |
+| Abstract | 9 pt | 9 pt | 9 pt |
+| Section Heading | 10 pt | 10 pt | 10 pt |
+| Body Text | 10 pt | 10 pt | 10 pt |
+| Figure Caption | 8 pt | 8.5 pt | 9 pt |
+| Table Text | 8 pt | 8.5 pt | 9 pt |
+| References | 8 pt | 8.5 pt | 9 pt |
+
+### Layout
+
+| Device | Columns |
+|------|------|
+| Mobile | 1 column |
+| Tablet | 1–2 columns |
+| Desktop | 2 columns |
