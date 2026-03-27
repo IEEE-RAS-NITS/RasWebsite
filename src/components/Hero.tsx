@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -117,38 +116,23 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1e0a12] via-[#7a1b2e] to-[#1e0a12]" />
+      {/* Video background */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      >
+        <source src="/Video%20Project.mp4" type="video/mp4" />
+      </video>
 
-      {/* Side images with overlay */}
-      <div className="absolute inset-0 flex">
-        {/* Left image */}
-        <div className="relative w-2/5 shrink-0 hidden sm:block">
-          <Image
-            src="/hero-left.svg"
-            alt="VR robotics demonstration"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1e0a12]/30 via-[#7a1b2e]/60 to-[#7a1b2e]/90" />
-        </div>
+      {/* Fallback gradient if video fails to load */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1e0a12] via-[#7a1b2e] to-[#1e0a12] opacity-40" />
 
-        {/* Centre spacer */}
-        <div className="flex-1" />
-
-        {/* Right image */}
-        <div className="relative w-2/5 shrink-0 hidden sm:block">
-          <Image
-            src="/hero-right.svg"
-            alt="IEEE RAS conference booth"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-l from-[#1e0a12]/30 via-[#7a1b2e]/60 to-[#7a1b2e]/90" />
-        </div>
-      </div>
+      {/* Light maroon mask */}
+      <div className="pointer-events-none absolute inset-0 bg-[#b14a62]/20" />
 
       {/* Content */}
       <div

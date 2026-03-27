@@ -5,19 +5,19 @@ const cards = [
     title: "Speaker Sessions",
     description:
       "Regular speaker sessions with relevant people working in the field of robotics and automation.",
-    href: "#",
+    href: "/sessions",
   },
   {
     title: "Projects",
     description:
       "Development of innovative projects solving real-world problems.",
-    href: "#",
+    href: "/projects",
   },
   {
     title: "Events",
     description:
       "Access information on RAS conferences, including venues, deadlines, sponsorship types, and event updates.",
-    href: "#",
+    href: "/sessions",
   },
 ];
 
