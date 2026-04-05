@@ -26,9 +26,9 @@ style={{ background: "linear-gradient(90deg, #A35928 0%, #700B4F 94%)" }}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="mb-6 inline-flex items-center gap-2 rounded border border-[#00629B]/30 bg-[#00629B]/5 px-3 py-1"
+            className="mb-6 inline-flex items-center gap-2 rounded border border-[#FFFFFF]/30 bg-[#FFFFFF]/5 px-3 py-1"
           >
-            <span className="text-[10px] font-mono font-bold uppercase tracking-[0.3em] text-[#00629B]">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-[0.3em] text-[#FFFFFF]">
               Advancing Technology for Humanity
             </span>
           </motion.div>

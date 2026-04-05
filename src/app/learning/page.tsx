@@ -16,7 +16,7 @@ export default function LearningPage() {
   return (
     <div 
       className="min-h-screen flex flex-col text-white selection:bg-[#00629B]"
-      
+      style={{ background: "linear-gradient(90deg, #A35928 0%, #700B4F 94%)" }}
     >
       <Header />
 
