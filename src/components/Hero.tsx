@@ -2,13 +2,10 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 /* ── Animated counter hook ─────────────────────────────── */
-function useCountUp(
-  end: number,
-  duration = 2000,
-  start = false,
-) {
+function useCountUp(end: number, duration = 2000, start = false) {
   const [value, setValue] = useState(0);
   const rafRef = useRef<number | null>(null);
 
@@ -19,7 +16,6 @@ function useCountUp(
     const tick = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // ease-out cubic
       const eased = 1 - (1 - progress) ** 3;
       setValue(Math.floor(eased * end));
       if (progress < 1) {
@@ -39,19 +35,7 @@ function useCountUp(
 }
 
 /* ── Single stat card ──────────────────────────────────── */
-function StatItem({
-  end,
-  suffix,
-  label,
-  started,
-  delay,
-}: {
-  end: number;
-  suffix: string;
-  label: string;
-  started: boolean;
-  delay: number;
-}) {
+function StatItem({ end, suffix, label, started, delay }: any) {
   const [go, setGo] = useState(false);
 
   useEffect(() => {
@@ -85,19 +69,33 @@ export default function Hero() {
   const [statsVisible, setStatsVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
 
-  /* trigger content entrance after mount */
+  /* 🔹 Carousel state */
+  const images = [
+    "/ras-conf.png",
+    "/hero-left.svg",
+    "/hero-right.svg",
+    "/ras-conf.png",
+    "/hero-right.svg",
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   useEffect(() => {
     const id = requestAnimationFrame(() => setContentVisible(true));
     return () => cancelAnimationFrame(id);
   }, []);
 
-  /* intersection observer for stats */
-  const observerCb = useCallback(
-    (entries: IntersectionObserverEntry[]) => {
-      if (entries[0]?.isIntersecting) setStatsVisible(true);
-    },
-    [],
-  );
+  const observerCb = useCallback((entries: IntersectionObserverEntry[]) => {
+    if (entries[0]?.isIntersecting) setStatsVisible(true);
+  }, []);
 
   useEffect(() => {
     const el = statsRef.current;
@@ -116,22 +114,33 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Video background */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      >
-        <source src="/Video%20Project.mp4" type="video/mp4" />
-      </video>
+      {/* 🔹 Image Carousel (replaces video) */}
+      <div className="absolute inset-0 h-full w-full">
+        <img
+          src={images[current]}
+          className="h-full w-full object-cover transition-all duration-700"
+          alt="hero"
+        />
 
-      {/* Fallback gradient if video fails to load */}
+        {/* Left */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-white z-20"
+        >
+          <ChevronLeft size={36} />
+        </button>
+
+        {/* Right */}
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 text-white z-20"
+        >
+          <ChevronRight size={36} />
+        </button>
+      </div>
+
+      {/* SAME overlays (unchanged) */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#1e0a12] via-[#7a1b2e] to-[#1e0a12] opacity-40" />
-
-      {/* Light maroon mask */}
       <div className="pointer-events-none absolute inset-0 bg-[#b14a62]/20" />
 
       {/* Content */}
@@ -142,50 +151,32 @@ export default function Hero() {
           transform: contentVisible ? "translateY(0)" : "translateY(30px)",
         }}
       >
-        <p
-          className="text-xs font-semibold uppercase tracking-[0.25em] text-[#c9a84c] sm:text-sm transition-all duration-700 delay-200"
-          style={{
-            opacity: contentVisible ? 1 : 0,
-            transform: contentVisible ? "translateY(0)" : "translateY(15px)",
-          }}
-        >
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#c9a84c] sm:text-sm">
           IEEE Robotics and Automation Society
         </p>
 
-        <h1
-          className="mt-6 text-2xl font-bold leading-tight text-white sm:text-3xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.15] transition-all duration-700 delay-400 drop-shadow-lg"
-          style={{
-            opacity: contentVisible ? 1 : 0,
-            transform: contentVisible ? "translateY(0)" : "translateY(20px)",
-          }}
-        >
+        <h1 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-5xl lg:text-[3.25rem]">
           The leading organization in research and technological developments in
           robotics and automation worldwide
         </h1>
 
-        <div
-          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5 transition-all duration-700 delay-600"
-          style={{
-            opacity: contentVisible ? 1 : 0,
-            transform: contentVisible ? "translateY(0)" : "translateY(20px)",
-          }}
-        >
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
           <Link
             href="#"
-            className="rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#7a1b2e] no-underline shadow-lg transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:shadow-xl"
+            className="rounded-full bg-white px-8 py-3 text-sm font-semibold text-[#7a1b2e]"
           >
             Become a RAS Member
           </Link>
           <Link
             href="#"
-            className="rounded-full border-2 border-white px-8 py-3 text-sm font-semibold text-white no-underline transition-all duration-300 hover:bg-white/10 hover:scale-105"
+            className="rounded-full border-2 border-white px-8 py-3 text-sm font-semibold text-white"
           >
             About Us
           </Link>
         </div>
       </div>
 
-      {/* Stats bar */}
+      {/* Stats */}
       <div
         ref={statsRef}
         className="relative z-10 border-t border-white/15 bg-[#3a0e1a]/85 backdrop-blur-sm"
@@ -194,9 +185,7 @@ export default function Hero() {
           {stats.map((s, i) => (
             <StatItem
               key={s.label}
-              end={s.end}
-              suffix={s.suffix}
-              label={s.label}
+              {...s}
               started={statsVisible}
               delay={i * 150}
             />
