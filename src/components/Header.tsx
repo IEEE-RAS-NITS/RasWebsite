@@ -4,7 +4,8 @@ const navItems = [
   { label: "About", href: "/about" },
   { label: "Members", href: "/members" },
   { label: "Projects", href: "/projects"},
-  { label: "Blogs", href: "/blog" }
+  { label: "Blogs", href: "/blog" },
+  { label: "Learning", href: "/learning"}
 ];
 
 export default function Header() {
@@ -13,9 +14,9 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4">
         <Link
           href="/"
-          className="text-xl font-bold text-[var(--ras-blue)] no-underline"
+          className="text-s  font-bold text-[var(--ras-blue)] no-underline"
         >
-          IEEE RAS
+          <img src="/RAS_LOGO.svg" alt="logo" style={{"height": "40px"}}/>
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
           {navItems.map((item) => (

@@ -1,13 +1,42 @@
 {
     "members": [
         {
+            "name": "Dr. Vipin Chandra Pal",
+            "role": "FIC",
+            "image": "",
+            "socials": { "email": "fic1@nits.ac.in", "linkedin": "#" }
+        },
+        {
+            "name": "Dr. Chandrajit Choudhury",
+            "role": "FIC",
+            "image": "",
+            "socials": { "email": "fic2@nits.ac.in", "linkedin": "#" }
+        },
+        {
+            "name": "Demo Chairman",
+            "role": "Chairman",
+            "image": "",
+            "socials": { "linkedin": "#", "github": "#" }
+        },
+        {
+            "name": "Demo Vice Chairman",
+            "role": "Vice Chairman",
+            "image": "",
+            "socials": { "linkedin": "#", "github": "#" }
+        },
+        {
+            "name": "Demo Gen. Secretary",
+            "role": "General Secretary",
+            "image": "",
+            "socials": { "linkedin": "#", "email": "gs@example.com" }
+        },
+        {
             "name": "Tahmid Choudhury",
             "role": "Treasurer",
             "image": "",
             "socials": {
                 "github": "https://github.com/Tahmid019",
                 "linkedin": "https://linkedin.com/in/tahmid019/",
-                "facebook": "",
                 "email": "tahmidchoudhury019@gmail.com"
             }
         },
@@ -18,7 +47,6 @@
             "socials": {
                 "github": "https://github.com/Abhirup188",
                 "linkedin": "https://www.linkedin.com/in/abhirup-chakraborty-124b49289",
-                "facebook": "",
                 "email": "abhirup188@gmail.com"
             }
         },
@@ -45,6 +73,16 @@
             }
         },
         {
+            "name": "Shahid Afridi",
+            "role": "Moderator",
+            "image": "",
+            "socials": {
+                "github": "https://github.com/shahidafridi44140-pixel",
+                "linkedin": "https://www.linkedin.com/in/shahid-afridi-05b8a731b/",
+                "email": "shahidafridi44140@gmail.com"
+            }
+        },
+        {
             "name": "Dhrishit Goswami",
             "role": "Moderator",
             "image": "",
@@ -62,7 +100,6 @@
             "socials": {
                 "github": "https://github.com/psd688",
                 "linkedin": "https://www.linkedin.com/in/prochiyamaan-shri-deka?",
-                "facebook": "",
                 "email": "psdanon041@gmail.com"
             }
         },
@@ -73,19 +110,7 @@
             "socials": {
                 "github": "https://github.com/nixnord",
                 "linkedin": "https://www.linkedin.com/in/anubhav-kalita0",
-                "facebook": "",
                 "email": "kalitaanubhav0@gmail.com"
-            }
-        },
-        {
-            "name": "Shahid Afridi",
-            "role": "Member",
-            "image": "",
-            "socials": {
-                "github": "https://github.com/shahidafridi44140-pixel",
-                "linkedin": "https://www.linkedin.com/in/shahid-afridi-05b8a731b/",
-                "facebook": "",
-                "email": "shahidafridi44140@gmail.com"
             }
         }
     ]
