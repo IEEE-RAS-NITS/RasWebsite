@@ -104,7 +104,7 @@ export default function Hero() {
     { end: 24000, suffix: "+", label: "Members Worldwide" },
     { end: 120, suffix: "", label: "Countries" },
     { end: 12660, suffix: "", label: "Publications" },
-    { end: 890, suffix: "", label: "Local Chapters" },
+    { end: 210, suffix: "", label: "Local Chapters" },
   ];
 
   return (
