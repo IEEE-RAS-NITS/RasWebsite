@@ -170,7 +170,7 @@ export default function Hero() {
             Become a RAS Member
           </Link>
           <Link
-            href="#"
+            href="/about"
             className="rounded-full border-2 border-white px-8 py-3 text-sm font-semibold text-white no-underline transition-all duration-300 hover:bg-white/10 hover:scale-105"
           >
             About Us

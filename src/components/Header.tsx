@@ -50,16 +50,16 @@ export default function Header() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-4">
-              <a href="#" className="p-2 rounded-full hover:bg-gray-100 transition">
+              <a href="https://www.linkedin.com/company/ieee-ras-silchar-subsection/posts/?feedView=all" className="p-2 rounded-full hover:bg-gray-100 transition">
                 <FaLinkedinIn size={18} color="#0077B5" />
               </a>
-              <a href="#" className="p-2 rounded-full hover:bg-gray-100 transition">
+              <a href="https://www.facebook.com/profile.php?id=100091380648276&mibextid=rS40aB7S9Ucbxw6v" className="p-2 rounded-full hover:bg-gray-100 transition">
                 <FaFacebookF size={18} color="#1877F2" />
               </a>
-              <a href="#" className="p-2 rounded-full hover:bg-gray-100 transition">
+              <a href="https://www.instagram.com/ieee_ras.nits?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="p-2 rounded-full hover:bg-gray-100 transition">
                 <FaInstagram size={18} color="#C13584" />
               </a>
-              <a href="#" className="p-2 rounded-full hover:bg-gray-100 transition">
+              <a href="https://www.youtube.com/@rasieeesilcharsubsection" className="p-2 rounded-full hover:bg-gray-100 transition">
                 <FaYoutube size={18} color="#FF0000" />
               </a>
             </div>
