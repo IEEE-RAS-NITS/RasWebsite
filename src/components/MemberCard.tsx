@@ -29,8 +29,8 @@ export default function MemberCard({ name, role, image, socials, index }: Member
                 delay: index * 0.08,
                 ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative flex flex-col items-center rounded-2xl border border-white/5 px-6 py-10"
-            style={{ backgroundColor: "rgba(255,255,255,0.03)" }}
+            className="relative flex flex-col items-center rounded-2xl border border-sky-200/80 px-6 py-10"
+            style={{ backgroundColor: "rgba(255,255,255,0.75)" }}
         >
             {/* Avatar */}
             <div className="relative mb-6 h-40 w-40">
@@ -50,8 +50,8 @@ export default function MemberCard({ name, role, image, socials, index }: Member
                     />
                 ) : (
                     <div
-                        className="flex h-full w-full items-center justify-center rounded-full text-3xl font-bold text-white/70"
-                        style={{ backgroundColor: "var(--ras-blue-dark)", margin: "3px" }}
+                        className="flex h-full w-full items-center justify-center rounded-full text-3xl font-bold text-sky-900/80"
+                        style={{ backgroundColor: "#d8eefc", margin: "3px" }}
                     >
                         {initials}
                     </div>
@@ -59,8 +59,8 @@ export default function MemberCard({ name, role, image, socials, index }: Member
             </div>
 
             {/* Name & Role */}
-            <h3 className="mb-1 text-lg font-semibold text-white">{name}</h3>
-            <p className="mb-6 text-xs font-medium uppercase tracking-[0.15em] text-white/40">
+            <h3 className="mb-1 text-lg font-semibold text-sky-950">{name}</h3>
+            <p className="mb-6 text-xs font-medium uppercase tracking-[0.15em] text-sky-800/65">
                 {role}
             </p>
 
@@ -72,9 +72,9 @@ export default function MemberCard({ name, role, image, socials, index }: Member
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${name} GitHub`}
-                        className="opacity-40 transition-opacity duration-200 hover:opacity-100"
+                        className="opacity-55 transition-opacity duration-200 hover:opacity-100"
                     >
-                        <Image src="/github.svg" alt="GitHub" width={20} height={20} className="invert" />
+                        <Image src="/github.svg" alt="GitHub" width={20} height={20} />
                     </a>
                 )}
                 {socials.linkedin && (
@@ -83,9 +83,9 @@ export default function MemberCard({ name, role, image, socials, index }: Member
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${name} LinkedIn`}
-                        className="opacity-40 transition-opacity duration-200 hover:opacity-100"
+                        className="opacity-55 transition-opacity duration-200 hover:opacity-100"
                     >
-                        <Image src="/linkedin.svg" alt="LinkedIn" width={20} height={20} className="invert" />
+                        <Image src="/linkedin.svg" alt="LinkedIn" width={20} height={20} />
                     </a>
                 )}
                 {socials.facebook && (
@@ -94,18 +94,18 @@ export default function MemberCard({ name, role, image, socials, index }: Member
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${name} Facebook`}
-                        className="opacity-40 transition-opacity duration-200 hover:opacity-100"
+                        className="opacity-55 transition-opacity duration-200 hover:opacity-100"
                     >
-                        <Image src="/facebook.svg" alt="Facebook" width={20} height={20} className="invert" />
+                        <Image src="/facebook.svg" alt="Facebook" width={20} height={20} />
                     </a>
                 )}
                 {socials.email && (
                     <a
                         href={`mailto:${socials.email}`}
                         aria-label={`${name} Email`}
-                        className="opacity-40 transition-opacity duration-200 hover:opacity-100"
+                        className="opacity-55 transition-opacity duration-200 hover:opacity-100"
                     >
-                        <Image src="/envelope.svg" alt="Email" width={20} height={20} className="invert" />
+                        <Image src="/envelope.svg" alt="Email" width={20} height={20} />
                     </a>
                 )}
             </div>

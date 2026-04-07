@@ -1,6 +1,28 @@
 {
     "members": [
         {
+            "name": "Faculty Mentor 1",
+            "role": "Faculty In Charge",
+            "image": "",
+            "socials": {
+                "github": "",
+                "linkedin": "",
+                "facebook": "",
+                "email": ""
+            }
+        },
+        {
+            "name": "Faculty Mentor 2",
+            "role": "Faculty In Charge",
+            "image": "",
+            "socials": {
+                "github": "",
+                "linkedin": "",
+                "facebook": "",
+                "email": ""
+            }
+        },
+        {
             "name": "Tahmid Choudhury",
             "role": "Treasurer",
             "image": "",
@@ -13,7 +35,7 @@
         },
         {
             "name": "Abhirup Chakraborty",
-            "role": "Research Head",
+            "role": "Chair",
             "image": "",
             "socials": {
                 "github": "https://github.com/Abhirup188",
@@ -24,7 +46,7 @@
         },
         {
             "name": "Debangshu Mounas",
-            "role": "Academic & Research Secretary",
+            "role": "Vice Chair",
             "image": "",
             "socials": {
                 "github": "https://github.com/DMounas",

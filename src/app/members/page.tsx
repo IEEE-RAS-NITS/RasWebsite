@@ -11,7 +11,13 @@ export const metadata: Metadata = {
 
 export default function MembersPage() {
     return (
-        <div className="min-h-screen" style={{ backgroundColor: "#0A192F" }}>
+        <div
+            className="min-h-screen"
+            style={{
+                background:
+                    "linear-gradient(180deg, #eaf7ff 0%, #dff1ff 38%, #f4fbff 100%)",
+            }}
+        >
             <Header />
             <main className="pt-8 pb-16">
                 <MembersGrid />
