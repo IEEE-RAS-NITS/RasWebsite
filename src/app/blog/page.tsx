@@ -12,72 +12,17 @@ export default function BlogPage() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch(
-          `https://newsapi.org/v2/everything?q=("robotics" OR "robot" OR "automation" OR "autonomous systems" OR "humanoid robot" OR "robotics research" OR "industrial robot")&language=en&sortBy=publishedAt&pageSize=100&apiKey=4f15414297104377871d0f09d08277b6`
-        );
+        const res = await fetch("/api/blogs"); // ✅ FIXED
 
         const data = await res.json();
-        console.log("data is" ,data)
+        console.log("data is", data);
 
-        const roboticsKeywords = [
-          "robot",
-          "robotics",
-          "automation",
-          "autonomous",
-          "humanoid",
-          "robot arm",
-          "industrial robot",
-          "AI robot",
-          "machine learning robot",
-        ];
+        const formatted = data.articles; // ✅ comes pre-filtered from backend
 
-        const bannedKeywords = [
-          "sex",
-          "celebrity",
-          "movie",
-          "entertainment",
-          "fashion",
-          "music",
-          "dating",
-          "adult",
-          "politics",
-          "crime",
-        ];
-
-        const formatted = data.articles
-          .filter((item: any) => {
-            // ✅ discard if no image
-            if (!item.title || !item.urlToImage || item.urlToImage.trim() === "") return false;
-
-            const text = (
-              item.title +
-              " " +
-              (item.description || "")
-            ).toLowerCase();
-
-            const isRelevant = roboticsKeywords.some((keyword) =>
-              text.includes(keyword)
-            );
-
-            const isClean = !bannedKeywords.some((word) =>
-              text.includes(word)
-            );
-
-            return isRelevant && isClean;
-          })
-          .map((item: any, index: number) => ({
-            id: index + 1,
-            title: item.title,
-            description:
-              item.description || "No description available.",
-            image: item.urlToImage,
-            url: item.url,
-          }));
-
-          console.log("formatted", formatted)
+        console.log("formatted", formatted);
 
         setBlogs(formatted);
-        console.log(blogs)
+        console.log(blogs);
       } catch (err) {
         console.error(err);
       }
