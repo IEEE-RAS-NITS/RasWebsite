@@ -2,58 +2,64 @@
     "members": [
         {
             "name": "Dr. Vipin Chandra Pal",
-            "role": "FIC",
-            "image": "",
-            "socials": { "email": "fic1@nits.ac.in", "linkedin": "#" }
+            "role": "Faculty In-Charge",
+            "image": "/images/members/Dr. Vipin Chandra Pal.jpeg",
+            "socials": { "linkedin": "#", "email": "vipin@ei.nits.ac.in"}
         },
         {
             "name": "Dr. Chandrajit Choudhury",
-            "role": "FIC",
-            "image": "",
-            "socials": { "email": "fic2@nits.ac.in", "linkedin": "#" }
+            "role": "Faculty In-Charge",
+            "image": "/images/members/Dr. Chandrajit Choudhury.jpeg",
+            "socials": { "linkedin": "#", "email": "chandrajit@ece.nits.ac.in"}
         },
         {
-            "name": "Demo Chairman",
+            "name": "Shwetangshu Biswas",
             "role": "Chairman",
-            "image": "",
-            "socials": { "linkedin": "#", "github": "#" }
+            "image": "/images/members/Shwetangshu Biswas.jpeg",
+            "socials": { 
+                "linkedin": "https://www.linkedin.com/in/shwetangshu-biswas/", 
+                "github": "https://github.com/Shwetangshu",
+                "facebook": "https://www.facebook.com/shwetangshu%20biswas",
+                "email": "shwetangshu.biswas@gmail.com" }
         },
         {
-            "name": "Demo Vice Chairman",
+            "name": "Bisal Prasad Das",
             "role": "Vice Chairman",
-            "image": "",
-            "socials": { "linkedin": "#", "github": "#" }
+            "image": "/images/members/Bisal Prasad.jpeg",
+            "socials": { 
+                "linkedin": "https://www.linkedin.com/in/bisal-prasad/", 
+                "github": "#",
+                "facebook": "#",
+                "email": "bisalprasad2003@gmail.com" }
         },
-        {
-            "name": "Demo Gen. Secretary",
-            "role": "General Secretary",
-            "image": "",
-            "socials": { "linkedin": "#", "email": "gs@example.com" }
-        },
+        
         {
             "name": "Tahmid Choudhury",
             "role": "Treasurer",
-            "image": "",
+            "image": "/images/members/treasurer.jpg",
             "socials": {
                 "github": "https://github.com/Tahmid019",
                 "linkedin": "https://linkedin.com/in/tahmid019/",
+                "facebook": "",
                 "email": "tahmidchoudhury019@gmail.com"
             }
         },
+
         {
-            "name": "Abhirup Chakraborty",
-            "role": "Research Head",
-            "image": "",
-            "socials": {
-                "github": "https://github.com/Abhirup188",
-                "linkedin": "https://www.linkedin.com/in/abhirup-chakraborty-124b49289",
-                "email": "abhirup188@gmail.com"
-            }
+            "name": "Ranveer Bhura",
+            "role": "General Secretary",
+            "image": "/images/members/Ranveer Bhura.png",
+            "socials": { 
+                "github": "https://github.com/runveir",
+                "linkedin": "https://www.linkedin.com/in/ranveer-bhura-a9705023b/", 
+                "facebook": "#",
+                "email": "ranveer_ug_24@mech.nits.ac.in" }
         },
+
         {
             "name": "Debangshu Mounas",
             "role": "Academic & Research Secretary",
-            "image": "",
+            "image": "/images/members/Debangshu Mounas.jpg",
             "socials": {
                 "github": "https://github.com/DMounas",
                 "linkedin": "https://www.linkedin.com/in/debangshu-mounas-3b273b317",
@@ -61,10 +67,23 @@
                 "email": "debangshumounas.dev@gmail.com"
             }
         },
+
+        {
+            "name": "Abhirup Chakraborty",
+            "role": "Research Head",
+            "image": "/images/members/Abhirup Chakraborty.jpg",
+            "socials": {
+                "github": "https://github.com/Abhirup188",
+                "linkedin": "https://www.linkedin.com/in/abhirup-chakraborty-124b49289",
+                "facebook": "",
+                "email": "abhirup188@gmail.com"
+            }
+        },
+        
         {
             "name": "Sachin Thakur",
             "role": "Head of Social Media",
-            "image": "",
+            "image": "/images/members/Sachin Thakur.jpeg",
             "socials": {
                 "github": "https://github.com/sachin3848115",
                 "linkedin": "http://www.linkedin.com/in/sachinthakur009",
@@ -73,19 +92,20 @@
             }
         },
         {
-            "name": "Shahid Afridi",
+            "name": "Maithresh",
             "role": "Moderator",
             "image": "",
             "socials": {
-                "github": "https://github.com/shahidafridi44140-pixel",
-                "linkedin": "https://www.linkedin.com/in/shahid-afridi-05b8a731b/",
-                "email": "shahidafridi44140@gmail.com"
+                "github": "",
+                "linkedin": "",
+                "facebook": "",
+                "email": ""
             }
         },
         {
             "name": "Dhrishit Goswami",
             "role": "Moderator",
-            "image": "",
+            "image": "/images/members/DHRISHIT GOSWAMI.jpg",
             "socials": {
                 "github": "https://github.com/MeteorX778",
                 "linkedin": "https://www.linkedin.com/in/dhrishitgoswami/",
@@ -96,10 +116,11 @@
         {
             "name": "Prochiyamaan Shri Deka",
             "role": "Member",
-            "image": "",
+            "image": "/images/members/PROCHIYAMAAN SHRI DEKA.jpg",
             "socials": {
                 "github": "https://github.com/psd688",
                 "linkedin": "https://www.linkedin.com/in/prochiyamaan-shri-deka?",
+                "facebook": "",
                 "email": "psdanon041@gmail.com"
             }
         },
@@ -110,6 +131,7 @@
             "socials": {
                 "github": "https://github.com/nixnord",
                 "linkedin": "https://www.linkedin.com/in/anubhav-kalita0",
+                "facebook": "",
                 "email": "kalitaanubhav0@gmail.com"
             }
         }

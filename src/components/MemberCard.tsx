@@ -89,8 +89,9 @@ export default function MemberCard({
 
                 {/* Socials */}
                 <div className="flex justify-center gap-4">
-                    {Object.entries(socials).map(([platform, url]) =>
-                        url ? (
+                    {["linkedin", "github", "facebook", "email"].map((platform) => {
+                        const url = socials[platform as keyof typeof socials];
+                        return url ? (
                             <a
                                 key={platform}
                                 href={
@@ -105,14 +106,14 @@ export default function MemberCard({
                                 <span className="sr-only">{platform}</span>
                                 <div className="h-5 w-5 rounded-sm flex items-center justify-center p-1 bg-white/10 hover:bg-amber-600 transition-colors">
                                     <img
-                                        src={`/${platform}.svg`}
+                                        src={platform === "email" ? "/envelope.svg" : `/${platform}.svg`}
                                         alt=""
                                         className="invert opacity-80"
                                     />
                                 </div>
                             </a>
-                        ) : null
-                    )}
+                        ) : null;
+                    })}
                 </div>
             </div>
         </motion.div>

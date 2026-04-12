@@ -5,7 +5,7 @@ import MemberCard from "./MemberCard";
 import membersData from "@/data/members.json";
 
 const SECTIONS = [
-    { title: "Faculty Mentors", roles: ["FIC"], size: "small" },
+    { title: "Faculty Mentors", roles: ["Faculty In-Charge"], size: "small" },
     { title: "The Board", roles: ["Chairman", "Vice Chairman"], size: "small" },
     { title: "Executive Core", roles: ["General Secretary", "Treasurer", "Research Head", "Academic & Research Secretary", "Head of Social Media", "Moderator"], size: "large" },
     { title: "Junior Division", roles: ["Member"], size: "large" }
